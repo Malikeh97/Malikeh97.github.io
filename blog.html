@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog posts on AI Safety, LLM Research, and thoughts on democratizing AI">
+    <title>Blog | Malikeh Ehghaghi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Blog-specific styles */
+        .blog-hero {
+            padding: calc(var(--nav-height) + var(--spacing-xl)) 0 var(--spacing-lg);
+            background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream-warm) 100%);
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .blog-hero p {
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .blog-card {
+            background-color: var(--color-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(30, 58, 95, 0.08);
+            transition: all var(--transition-medium);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(30, 58, 95, 0.15);
+        }
+
+        .blog-card-content {
+            padding: var(--spacing-md);
+        }
+
+        .blog-card-meta {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.85rem;
+        }
+
+        .blog-card-date {
+            color: var(--color-text-light);
+        }
+
+        .blog-card-category {
+            color: var(--color-burgundy);
+            font-weight: 500;
+        }
+
+        .blog-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.4;
+        }
+
+        .blog-card h2 a {
+            color: var(--color-navy);
+            transition: color var(--transition-fast);
+        }
+
+        .blog-card h2 a:hover {
+            color: var(--color-burgundy);
+        }
+
+        .blog-card-excerpt {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .blog-card-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-burgundy);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .blog-card-link:hover {
+            gap: 10px;
+        }
+
+        .blog-card-link svg {
+            transition: transform var(--transition-fast);
+        }
+
+        .blog-card:hover .blog-card-link svg {
+            transform: translateX(4px);
+        }
+
+        .blog-empty {
+            text-align: center;
+            padding: var(--spacing-xl);
+            background-color: var(--color-nude);
+            border-radius: 8px;
+        }
+
+        .blog-empty h3 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-navy);
+        }
+
+        .blog-empty p {
+            color: var(--color-text-light);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: var(--color-burgundy);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .back-link:hover {
+            color: var(--color-burgundy-light);
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">YN</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#research" class="nav-link">Research</a></li>
+                <li><a href="index.html#publications" class="nav-link">Publications</a></li>
+                <li><a href="index.html#talks" class="nav-link">Talks</a></li>
+                <li><a href="index.html#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="index.html#service" class="nav-link">Service</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Blog Hero -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Blog</h1>
+                <p>Thoughts on AI safety, research insights, and reflections on democratizing artificial intelligence.</p>
+            </div>
+        </section>
+
+        <!-- Blog Posts -->
+        <section class="section">
+            <div class="container">
+                <a href="index.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Home
+                </a>
+
+                <div class="blog-grid">
+                    <!-- Blog Post 1 - Sample -->
+                    <article class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta">
+                                <span class="blog-card-date">March 15, 2025</span>
+                                <span class="blog-card-category">AI Safety</span>
+                            </div>
+                            <h2><a href="#">Rethinking Attack Success Metrics in Language Models</a></h2>
+                            <p class="blog-card-excerpt">
+                                Why binary success/failure metrics don't capture the full picture of adversarial robustness,
+                                and how probabilistic approaches can give us better insights into model vulnerabilities.
+                            </p>
+                            <a href="#" class="blog-card-link">
+                                Read more
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 - Sample -->
+                    <article class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta">
+                                <span class="blog-card-date">February 28, 2025</span>
+                                <span class="blog-card-category">Model Merging</span>
+                            </div>
+                            <h2><a href="#">The Art and Science of Model Merging</a></h2>
+                            <p class="blog-card-excerpt">
+                                A deep dive into model merging techniques, from simple weight averaging to sophisticated
+                                methods that preserve capabilities while combining knowledge from multiple models.
+                            </p>
+                            <a href="#" class="blog-card-link">
+                                Read more
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 - Sample -->
+                    <article class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta">
+                                <span class="blog-card-date">January 10, 2025</span>
+                                <span class="blog-card-category">Reflections</span>
+                            </div>
+                            <h2><a href="#">Why Democratizing AI Matters More Than Ever</a></h2>
+                            <p class="blog-card-excerpt">
+                                Thoughts on the importance of open-source AI development, collaborative research, and
+                                ensuring that AI benefits are distributed broadly across society.
+                            </p>
+                            <a href="#" class="blog-card-link">
+                                Read more
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 4 - Sample -->
+                    <article class="blog-card">
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta">
+                                <span class="blog-card-date">December 5, 2024</span>
+                                <span class="blog-card-category">Research</span>
+                            </div>
+                            <h2><a href="#">Understanding Tokenizer Effects on Model Robustness</a></h2>
+                            <p class="blog-card-excerpt">
+                                A companion post to our ICML paper, explaining the key findings on how tokenizer design
+                                choices impact the robustness of large language models.
+                            </p>
+                            <a href="#" class="blog-card-link">
+                                Read more
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Uncomment this section when there are no blog posts yet -->
+                <!--
+                <div class="blog-empty">
+                    <h3>Coming Soon</h3>
+                    <p>I'm working on some exciting blog posts. Check back soon for thoughts on AI safety, research insights, and more.</p>
+                </div>
+                -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Malikeh Ehghaghi. All rights reserved.</p>
+            <p class="footer-note">Built with care and attention to detail.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

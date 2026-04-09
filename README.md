@@ -1,96 +1,142 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Personal Academic Website
 
-![Academic Pages template example](images/homepage.png "Academic Pages template example")
+A clean, elegant personal website with classic French artistic styling. Built with pure HTML, CSS, and JavaScript - no build tools required.
 
-# Getting Started
+## Quick Start
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+### Local Preview
 
-See more info at https://academicpages.github.io/
+1. Open `index.html` in your browser, or
+2. Use a local server:
+   ```bash
+   # Using Python
+   python -m http.server 8000
 
-## Running locally
+   # Using Node.js (npx)
+   npx serve
+   ```
+3. Visit `http://localhost:8000`
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+### Deploy to GitHub Pages
 
-1. Clone the repository and made updates as detailed above.
+1. Create a new repository named `yourusername.github.io`
+2. Push all files to the `main` branch:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin https://github.com/yourusername/yourusername.github.io.git
+   git push -u origin main
+   ```
+3. Your site will be live at `https://yourusername.github.io`
 
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
+## Customization Guide
 
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+### 1. Personal Information
 
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
+Edit `index.html` to update:
 
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
+- **Name**: Search for "Your Name" and replace with your actual name
+- **Email**: Replace `your.email@university.edu` with your email
+- **Social Links**: Update GitHub, Twitter, LinkedIn, Google Scholar URLs
+- **Bio**: Update the biography text in the hero section
+- **Logo Initials**: Change "YN" in the nav-logo to your initials
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+### 2. Profile Photo
 
-## Using Docker
+1. Add your photo to the `images/` folder as `profile.jpg`
+2. Recommended size: 560x560 pixels (square)
+3. The image will automatically display in the circular frame
 
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
+### 3. Research Section
 
-You can build and execute the container by running the following command in the repository:
+Edit the research cards in `index.html`:
+- Update research area titles and descriptions
+- Modify or add/remove research cards as needed
+- Update the current project description
 
-```bash
-chmod -R 777 .
-docker compose up
+### 4. Publications
+
+Add your publications in the publications section:
+```html
+<article class="publication">
+    <span class="pub-venue">Conference/Journal Year</span>
+    <h3 class="pub-title">Paper Title</h3>
+    <p class="pub-authors"><strong>Your Name</strong>, Co-Authors</p>
+    <div class="pub-links">
+        <a href="paper-url" class="pub-link">Paper</a>
+        <a href="code-url" class="pub-link">Code</a>
+    </div>
+</article>
 ```
 
-You should now be able to access the website from `localhost:4000`.
+### 5. Talks
 
-### Using the DevContainer in VS Code
+Add talks in the talks section following the same pattern as publications.
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development coontainer configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+### 6. Teaching & Service
 
-# Maintenance
+Update the teaching experience, service roles, and community involvement sections with your information.
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+### 7. Blog Posts
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+Edit `blog.html` to add your blog posts:
+```html
+<article class="blog-card">
+    <div class="blog-card-content">
+        <div class="blog-card-meta">
+            <span class="blog-card-date">Month Day, Year</span>
+            <span class="blog-card-category">Category</span>
+        </div>
+        <h2><a href="link-to-post">Post Title</a></h2>
+        <p class="blog-card-excerpt">Brief description of the post...</p>
+        <a href="link-to-post" class="blog-card-link">Read more →</a>
+    </div>
+</article>
+```
 
-## Bugfixes and enhancements
+### 8. Colors
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+Edit `css/style.css` to change the color scheme. Key variables at the top:
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+```css
+:root {
+    --color-nude: #F5F0EB;      /* Background */
+    --color-navy: #1E3A5F;      /* Headers, accents */
+    --color-burgundy: #722F37;  /* Links, highlights */
+    --color-text: #2D2D2D;      /* Body text */
+}
+```
 
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+## File Structure
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+```
+personal-website/
+├── index.html          # Main page
+├── blog.html           # Blog listing
+├── README.md           # This file
+├── css/
+│   └── style.css       # All styles
+├── js/
+│   └── main.js         # Navigation & animations
+└── images/
+    └── profile.jpg     # Your photo (add this)
+```
+
+## Features
+
+- Responsive design (mobile, tablet, desktop)
+- Smooth scroll navigation
+- Mobile hamburger menu
+- Scroll-triggered animations
+- Print-friendly styles
+- No build tools or dependencies required
+- SEO-friendly semantic HTML
+
+## Browser Support
+
+Works in all modern browsers (Chrome, Firefox, Safari, Edge).
+
+## License
+
+Feel free to use and modify for your personal website.
