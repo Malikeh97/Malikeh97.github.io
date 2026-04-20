@@ -28,9 +28,9 @@
     --color-accent: var(--color-orange-red);
     --color-highlight: var(--color-bright-orange);
 
-    /* Typography */
-    --font-heading: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Typography - Roboto */
+    --font-heading: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -97,6 +97,12 @@ h1 {
 
 .name-last {
     color: var(--color-terra-cotta);
+}
+
+/* Inline pronunciation */
+.pronunciation {
+    color: var(--color-text-light);
+    font-size: 0.95em;
 }
 
 h2 {
@@ -298,9 +304,113 @@ em {
     background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream-warm) 100%);
 }
 
+/* Persian Miniature Theme - Simple Background */
+.hero-persian {
+    position: relative;
+    background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream-warm) 100%);
+}
+
+/* Page-specific Persian backgrounds */
+.page-womenintech {
+    background:
+        linear-gradient(180deg,
+            rgba(250, 246, 242, 0.9) 0%,
+            rgba(247, 240, 232, 0.85) 60%,
+            rgba(234, 142, 119, 0.3) 100%),
+        url('../images/persian-1.png') center/cover no-repeat;
+}
+
+.page-techrun {
+    background:
+        linear-gradient(180deg,
+            rgba(250, 246, 242, 0.88) 0%,
+            rgba(247, 240, 232, 0.82) 50%,
+            rgba(109, 27, 22, 0.2) 100%),
+        url('../images/persian-3.png') center/cover no-repeat;
+}
+
+.page-funfacts {
+    background:
+        linear-gradient(180deg,
+            rgba(250, 246, 242, 0.88) 0%,
+            rgba(247, 240, 232, 0.8) 50%,
+            rgba(204, 63, 24, 0.2) 100%),
+        url('../images/persian-4.png') center/cover no-repeat;
+}
+
+
+.hero-persian .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Persian Music Player */
+.music-player {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+}
+
+.music-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-white);
+    border: 1px solid var(--color-apricot);
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-terra-cotta);
+    box-shadow: 0 4px 20px rgba(109, 27, 22, 0.15);
+    transition: all var(--transition-medium);
+}
+
+.music-toggle:hover {
+    background: var(--color-terra-cotta);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.music-toggle.playing {
+    background: var(--color-terra-cotta);
+    color: var(--color-white);
+}
+
+.music-toggle.playing .music-icon {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.music-text {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .music-player {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .music-text {
+        display: none;
+    }
+
+    .music-toggle {
+        padding: 0.75rem;
+        border-radius: 50%;
+    }
+}
+
 .hero-content {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: auto 1fr;
     gap: var(--spacing-xl);
     align-items: center;
 }
@@ -495,6 +605,7 @@ em {
     border-radius: 8px;
     background-color: var(--color-cream-warm);
     transition: all var(--transition-medium);
+    overflow: hidden;
 }
 
 .publication.featured {
@@ -505,6 +616,21 @@ em {
 
 .publication:hover {
     transform: translateX(4px);
+}
+
+.pub-image {
+    display: block;
+    max-width: 780px;
+    margin: 0 0 var(--spacing-sm) 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(114, 47, 55, 0.15);
+}
+
+.pub-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .pub-venue {
@@ -555,6 +681,17 @@ em {
     background-color: var(--color-terra-cotta);
     color: var(--color-white);
 }
+
+.pub-link.huggingface {
+    color: #ff9d00;
+    border-color: #ff9d00;
+}
+
+.pub-link.huggingface:hover {
+    background-color: #ff9d00;
+    color: var(--color-white);
+}
+
 
 /* ==========================================================================
    Talks Section
@@ -890,8 +1027,14 @@ em {
         gap: var(--spacing-lg);
     }
 
+    .hero-persian .hero-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
     .hero-text {
         max-width: 100%;
+        margin: 0 auto;
     }
 
     .social-links {
@@ -989,6 +1132,184 @@ em {
     .social-btn {
         width: 100%;
         max-width: 200px;
+    }
+}
+
+/* ==========================================================================
+   Multi-Page Layout Styles
+   ========================================================================== */
+
+/* Page Header */
+.page-header {
+    padding: calc(var(--nav-height) + var(--spacing-xl)) 0 var(--spacing-lg);
+    background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream-warm) 100%);
+    text-align: center;
+}
+
+.page-header h1 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-intro {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* News List */
+.news-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid rgba(47, 38, 26, 0.1);
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    flex-shrink: 0;
+    width: 80px;
+    font-weight: 600;
+    color: var(--color-terra-cotta);
+    font-size: 0.9rem;
+}
+
+.news-content {
+    flex: 1;
+}
+
+.news-content strong {
+    color: var(--color-brown-gray);
+}
+
+/* Group/Mentees Grid */
+.group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.group-member {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(47, 38, 26, 0.08);
+    transition: all var(--transition-medium);
+}
+
+.group-member:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(47, 38, 26, 0.12);
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto var(--spacing-sm);
+    background-color: var(--color-cream-warm);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder-small {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-apricot-light) 0%, var(--color-cream-warm) 100%);
+    color: var(--color-text-light);
+    font-size: 0.8rem;
+}
+
+.group-member h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.member-affiliation {
+    font-size: 0.9rem;
+    color: var(--color-terra-cotta);
+    margin-bottom: 0.25rem;
+}
+
+.member-topic {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+/* Mentorship Info */
+.mentorship-info {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mentorship-info ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-sm) 0;
+}
+
+.mentorship-info li {
+    padding: var(--spacing-xs) 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.mentorship-info li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-terra-cotta);
+}
+
+/* Featured Card */
+.featured-card {
+    border: 2px solid var(--color-terra-cotta);
+}
+
+/* Active Nav Link */
+.nav-link.active {
+    color: var(--color-terra-cotta);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* TechRun Header Special */
+.techrun-header {
+    background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-apricot-light) 100%);
+}
+
+/* Responsive adjustments for multi-page */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    .news-date {
+        width: auto;
+    }
+
+    .group-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 

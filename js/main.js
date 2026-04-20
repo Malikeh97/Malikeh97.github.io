@@ -143,4 +143,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(style);
+
+    // Persian Music Player
+    const musicToggle = document.getElementById('music-toggle');
+    const persianMusic = document.getElementById('persian-music');
+
+    if (musicToggle && persianMusic) {
+        let isPlaying = false;
+
+        musicToggle.addEventListener('click', function() {
+            if (isPlaying) {
+                persianMusic.pause();
+                musicToggle.classList.remove('playing');
+                musicToggle.querySelector('.music-text').textContent = 'Play Persian Music';
+            } else {
+                persianMusic.volume = 0.3; // Soft background volume
+                persianMusic.play().catch(function(e) {
+                    console.log('Audio play failed:', e);
+                });
+                musicToggle.classList.add('playing');
+                musicToggle.querySelector('.music-text').textContent = 'Pause Music';
+            }
+            isPlaying = !isPlaying;
+        });
+    }
 });

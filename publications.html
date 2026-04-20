@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publications - Malikeh Ehghaghi">
+    <title>Publications | Malikeh Ehghaghi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">ME</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="publications.html" class="nav-link active">Publications</a></li>
+                <li><a href="talks.html" class="nav-link">Talks</a></li>
+                <li><a href="teaching.html" class="nav-link">Teaching</a></li>
+                <li><a href="group.html" class="nav-link">Group</a></li>
+                <li><a href="women-in-tech.html" class="nav-link">Women in Tech</a></li>
+                <li><a href="techrun.html" class="nav-link">TechRun</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="fun-facts.html" class="nav-link">Fun Facts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Publications</h1>
+                <p class="page-intro">Research papers and academic publications.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="publications-list">
+                    <article class="publication featured">
+                        <span class="pub-venue">Under Review (ICML 2026)</span>
+                        <h3 class="pub-title">TokSuite: Measuring the Impact of Tokenizer Choice on Language Model Behavior</h3>
+                        <p class="pub-authors">Gül Sena Altıntaş*, <strong>Malikeh Ehghaghi*</strong>, Brian Lester, Fengyuan Liu, Wanru Zhao, Marco Ciccone, Colin Raffel</p>
+                        <p class="pub-description">TokSuite is a suite of 14 identical language models trained with different tokenizers, enabling controlled study of tokenization's isolated impact on model behavior. It introduces a new benchmark targeting real-world perturbations, revealing novel insights into the strengths and weaknesses of widely-used tokenizers.</p>
+                        <!-- Optional paper thumbnail: remove if no image -->
+                        <div class="pub-image">
+                            <img src="images/toksuite.png" alt="TokSuite paper thumbnail">
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2512.20757" class="pub-link">Paper</a>
+                            <a href="https://github.com/r-three/Tokenizers" class="pub-link">Code</a>
+                            <!-- HuggingFace link: remove if not applicable -->
+                            <a href="https://huggingface.co/toksuite" class="pub-link huggingface">&#x1F917; HuggingFace</a>
+                            <a href="https://arxiv.org/bibtex/2512.20757" class="pub-link">BibTeX</a>
+                        </div>
+                    </article>
+
+                    <article class="publication">
+                        <span class="pub-venue">Conference/Journal</span>
+                        <h3 class="pub-title">Paper Title Here</h3>
+                        <p class="pub-authors"><strong>Malikeh Ehghaghi</strong>, Co-Author Names</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link">Paper</a>
+                            <a href="#" class="pub-link">Code</a>
+                        </div>
+                    </article>
+
+                    <!-- Add more publications here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Malikeh Ehghaghi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
