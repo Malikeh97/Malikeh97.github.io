@@ -712,6 +712,7 @@ em {
 }
 
 .pub-abs-btn {
+    display: inline-block;
     background: none;
     border: 1px solid var(--color-terra-cotta);
     padding: 2px 10px;
@@ -719,6 +720,7 @@ em {
     font-family: inherit;
     font-size: 0.78rem;
     font-weight: 600;
+    line-height: 1.5;
     color: var(--color-terra-cotta);
     cursor: pointer;
     letter-spacing: 0.04em;
@@ -731,8 +733,10 @@ em {
 }
 
 .pub-action-link {
+    display: inline-block;
     font-size: 0.78rem;
     font-weight: 600;
+    line-height: 1.5;
     color: var(--color-terra-cotta);
     border: 1px solid var(--color-terra-cotta);
     padding: 2px 10px;
