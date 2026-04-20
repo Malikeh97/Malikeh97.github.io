@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
     <!-- Navigation -->
@@ -38,44 +38,235 @@
         <section class="page-header">
             <div class="container">
                 <h1>Publications</h1>
-                <p class="page-intro">Research papers and academic publications.</p>
+                <p class="page-intro">Research papers and academic publications. <br>
+                    For the full list, visit my <a href="https://scholar.google.com/citations?user=les29Z8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> page.</p>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
                 <div class="publications-list">
-                    <article class="publication featured">
-                        <span class="pub-venue">Under Review (ICML 2026)</span>
-                        <h3 class="pub-title">TokSuite: Measuring the Impact of Tokenizer Choice on Language Model Behavior</h3>
-                        <p class="pub-authors">Gül Sena Altıntaş*, <strong>Malikeh Ehghaghi*</strong>, Brian Lester, Fengyuan Liu, Wanru Zhao, Marco Ciccone, Colin Raffel</p>
-                        <p class="pub-description">TokSuite is a suite of 14 identical language models trained with different tokenizers, enabling controlled study of tokenization's isolated impact on model behavior. It introduces a new benchmark targeting real-world perturbations, revealing novel insights into the strengths and weaknesses of widely-used tokenizers.</p>
-                        <!-- Optional paper thumbnail: remove if no image -->
-                        <div class="pub-image">
-                            <img src="images/toksuite.png" alt="TokSuite paper thumbnail">
+
+                    <!-- 2025 -->
+                    <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap">
+                                <img src="images/toksuite.png" alt="TokSuite thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">TokSuite: Measuring the Impact of Tokenizer Choice on Language Model Behavior</h3>
+                                <p class="pub-authors">Gül Sena Altıntaş*, <strong>Malikeh Ehghaghi*</strong>, Brian Lester, Fengyuan Liu, Wanru Zhao, Marco Ciccone, Colin Raffel</p>
+                                <p class="pub-venue-line"><em>Under Review (ICML 2026)</em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://arxiv.org/abs/2512.20757" class="pub-action-link">Paper</a>
+                                    <a href="https://github.com/r-three/Tokenizers" class="pub-action-link">Code</a>
+                                    <a href="https://huggingface.co/toksuite" class="pub-action-link">HuggingFace</a>
+                                    <a href="https://arxiv.org/bibtex/2512.20757" class="pub-action-link">BibTeX</a>
+                                </div>
+                            </div>
+                            <div class="pub-year">2025</div>
                         </div>
-                        <div class="pub-links">
-                            <a href="https://arxiv.org/abs/2512.20757" class="pub-link">Paper</a>
-                            <a href="https://github.com/r-three/Tokenizers" class="pub-link">Code</a>
-                            <!-- HuggingFace link: remove if not applicable -->
-                            <a href="https://huggingface.co/toksuite" class="pub-link huggingface">&#x1F917; HuggingFace</a>
-                            <a href="https://arxiv.org/bibtex/2512.20757" class="pub-link">BibTeX</a>
+                        <div class="pub-abstract hidden">
+                            <p>Tokenizers provide the fundamental basis through which text is represented and
+processed by language models (LMs). Despite the importance of tokenization, its
+role in LM performance and behavior is poorly understood due to the challenge
+of measuring the impact of tokenization in isolation. To address this need, we
+present TokSuite, a collection of models and a benchmark that supports research
+into tokenization’s influence on LMs. Specifically, we train fourteen models that
+use different tokenizers but are otherwise identical—using the same architecture,
+dataset, training budget, and initialization. Additionally, we curate and release
+a new benchmark that specifically measures model performance subject to realworld perturbations that are likely to influence tokenization. Together, TokSuite
+allows robust decoupling of the influence of a model’s tokenizer, supporting a
+series of novel findings that elucidate the respective benefits and shortcomings of
+a wide range of popular tokenizers.</p>
                         </div>
                     </article>
 
-                    <article class="publication featured">
-                        <span class="pub-venue">EMNLP 2024 (Industry Track)</span>
-                        <h3 class="pub-title">Arcee's MergeKit: A Toolkit for Merging Large Language Models</h3>
-                        <p class="pub-authors">Charles Goddard, Shamane Siriwardhana, <strong>Malikeh Ehghaghi</strong>, Luke Meyers, Vladimir Karpukhin, Brian Benedict, Mark McQuade, Jacob Solawetz</p>
-                        <p class="pub-description">MergeKit is an open-source library for combining language model checkpoints to enhance performance and versatility, having facilitated thousands of model merges and contributed to several powerful open-source models.</p>
-                        <!-- Optional paper thumbnail: remove if no image -->
-                        <div class="pub-image">
-                            <img src="images/mergekit.png" alt="TokSuite paper thumbnail">
-                        </div>                        
-                        <div class="pub-links">
-                            <a href="https://aclanthology.org/2024.emnlp-industry.36/" class="pub-link">Paper</a>
-                            <a href="https://github.com/arcee-ai/mergekit" class="pub-link">Code</a>
-                            <a href="https://aclanthology.org/2024.emnlp-industry.36.bib" class="pub-link">BibTeX</a>
+                    <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap">
+                                <img src="images/benchmarking.png" alt="Benchmarking Interpretability thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">Benchmarking Interpretability in Healthcare Using Pattern Discovery and Disentanglement</h3>
+                                <p class="pub-authors">Pei-Yuan Zhou, Amane Takeuchi, Fernando Martinez-Lopez, <strong>Malikeh Ehghaghi</strong>, Andrew K.C. Wong, En-Shiun Annie Lee</p>
+                                <p class="pub-venue-line"><em>Bioengineering (MDPI), 2025</em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://www.mdpi.com/2306-5354/12/3/308" class="pub-action-link">Paper</a>
+                                    <a href="https://doi.org/10.3390/bioengineering12030308" class="pub-action-link">DOI</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pub-abstract hidden">
+                            <p>The healthcare industry seeks to integrate AI into clinical applications, yet understanding AI decision making remains a challenge for healthcare practitioners as these systems often function as black boxes. Our work benchmarks the Pattern Discovery and Disentanglement (PDD) system's unsupervised learning algorithm, which provides interpretable outputs and clustering results from clinical notes to aid decision making. Using the MIMIC-IV dataset, we process free-text clinical notes and ICD-9 codes with Term Frequency-Inverse Document Frequency and Topic Modeling. The PDD algorithm discretizes numerical features into event-based features, discovers association patterns from a disentangled statistical feature value association space, and clusters clinical records. The output is an interpretable knowledge base linking knowledge, patterns, and data to support decision making. Despite being unsupervised, PDD demonstrated performance comparable to supervised deep learning models, validating its clustering ability and knowledge representation. We benchmark interpretability techniques—Feature Permutation, Gradient SHAP, and Integrated Gradients—on the best-performing models, evaluating these based on sufficiency, comprehensiveness, and sensitivity metrics. Our findings highlight the limitations of feature importance ranking and post hoc analysis for clinical diagnosis. Meanwhile, PDD's global interpretability effectively compensates for these issues, helping healthcare practitioners understand the decision-making process and providing suggestive clusters of diseases to assist their diagnosis.</p>
+                        </div>
+                    </article>
+
+                     <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap">
+                                <img src="images/mergekit.png" alt="MergeKit thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">Arcee's MergeKit: A Toolkit for Merging Large Language Models</h3>
+                                <p class="pub-authors">Charles Goddard, Shamane Siriwardhana, <strong>Malikeh Ehghaghi</strong>, Luke Meyers, Vladimir Karpukhin, Brian Benedict, Mark McQuade, Jacob Solawetz</p>
+                                <p class="pub-venue-line"><em>EMNLP 2024 (Industry Track)</em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://aclanthology.org/2024.emnlp-industry.36/" class="pub-action-link">Paper</a>
+                                    <a href="https://github.com/arcee-ai/mergekit" class="pub-action-link">Code</a>
+                                    <a href="https://aclanthology.org/2024.emnlp-industry.36.bib" class="pub-action-link">BibTeX</a>
+                                </div>
+                            </div>
+                            <div class="pub-year">2024</div>
+                        </div>
+                        <div class="pub-abstract hidden">
+                            <p>The rapid growth of open-source language models provides the opportunity to merge model
+checkpoints, combining their parameters to improve performance and versatility. Advances
+in transfer learning have led to numerous taskspecific models, which model merging can integrate into powerful multitask models without
+additional training. MergeKit is an open-source
+library designed to support this process with
+an efficient and extensible framework suitable
+for any hardware. It has facilitated the merging of thousands of models, contributing to
+some of the world’s most powerful open-source
+model checkpoints. </p>
+                        </div>
+                    </article>
+
+                    <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap">
+                                <img src="images/dam.png" alt="DAM thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">Merging in a Bottle: Differentiable Adaptive Merging (DAM) and the Path from Averaging to Automation</h3>
+                                <p class="pub-authors">Thomas Gauthier-Caron, Shamane Siriwardhana, Elliot Stein, <strong>Malikeh Ehghaghi</strong>, Charles Goddard, Mark McQuade, Jacob Solawetz, Maxime Labonne</p>
+                                <p class="pub-venue-line"><em>arXiv, 2024</em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://arxiv.org/abs/2410.08371" class="pub-action-link">Paper</a>
+                                    <a href="https://github.com/arcee-ai/DAM" class="pub-action-link">Code</a>
+                                    <a href="https://arxiv.org/bibtex/2410.08371" class="pub-action-link">BibTeX</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pub-abstract hidden">
+                            <p>By merging models, AI systems can combine the distinct strengths of separate language models, achieving a balance between multiple capabilities without requiring substantial retraining. However, the integration process can be intricate due to differences in training methods and fine-tuning, typically necessitating specialized knowledge and repeated refinement. This paper explores model merging techniques across a spectrum of complexity, examining where automated methods like evolutionary strategies stand compared to hyperparameter-driven approaches such as DARE, TIES-Merging and simpler methods like Model Soups. In addition, we introduce Differentiable Adaptive Merging (DAM), an efficient, adaptive merging approach as an alternative to evolutionary merging that optimizes model integration through scaling coefficients, minimizing computational demands. Our findings reveal that even simple averaging methods, like Model Soups, perform competitively when model similarity is high, underscoring each technique's unique strengths and limitations.</p>
+                        </div>
+                    </article>
+
+
+
+                    <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap pub-thumb-placeholder">
+                                <img src="images/zero-shot.png" alt="Zer-shot Speaker Verification thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">Zero-Shot Multi-Lingual Speaker Verification in Clinical Trials</h3>
+                                <p class="pub-authors">Ali Akram, Marija Stanojevic, <strong>Malikeh Ehghaghi</strong>, Jekaterina Novikova</p>
+                                <p class="pub-venue-line"><em>arXiv 2024</em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://arxiv.org/abs/2404.01981" class="pub-action-link">Paper</a>
+                                    <a href="https://arxiv.org/bibtex/2404.01981" class="pub-action-link">BibTeX</a>
+                                </div>
+                            </div>
+                            <div class="pub-year"></div>
+                        </div>
+                        <div class="pub-abstract hidden">
+                            <p>Due to the substantial number of clinicians, patients, and data collection environments involved in clinical trials, gathering data of superior quality poses a significant challenge. In clinical trials, patients are assessed based on their speech data to detect and monitor cognitive and mental health disorders. We propose using these speech recordings to verify the identities of enrolled patients and identify and exclude the individuals who try to enroll multiple times in the same trial. Since clinical studies are often conducted across different countries, creating a system that can perform speaker verification in diverse languages without additional development effort is imperative. We evaluate pre-trained TitaNet, ECAPA-TDNN, and SpeakerNet models by enrolling and testing with speech-impaired patients speaking English, German, Danish, Spanish, and Arabic languages. Our results demonstrate that tested models can effectively generalize to clinical speakers, with less than 2.7% EER for European Languages and 8.26% EER for Arabic. This represents a significant step in developing more versatile and efficient speaker verification systems for cognitive and mental health clinical trials that can be used across a wide range of languages and dialects, substantially reducing the effort required to develop speaker verification systems for multiple languages. We also evaluate how speech tasks and number of speakers involved in the trial influence the performance and show that the type of speech tasks impacts the model performance.</p>
+                        </div>
+                    </article>
+
+                    <!-- 2023 -->
+                    <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap">
+                                <img src="images/pdd.png" alt="PDD thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">Interpretable Disease Prediction from Clinical Text by Leveraging Pattern Disentanglement</h3>
+                                <p class="pub-authors"><strong>Malikeh Ehghaghi</strong>, Pei-Yuan Zhou, W.Y. Cheng, S. Rajabi, C.-H. Kuo, En-Shiun Annie Lee</p>
+                                <p class="pub-venue-line"><em>IEEE EMBS International Conference on Biomedical and Health Informatics (BHI), 2023</em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/10313408" class="pub-action-link">Paper</a>
+                                </div>
+                            </div>
+                            <div class="pub-year">2023</div>
+                        </div>
+                        <div class="pub-abstract hidden">
+                            <p>AI systems must make complex decisions in an understandable manner, yet existing models remain ineffective at generating interpretable insights in clinical settings. We address the challenge of discovering interpretable insights from clinical text for disease prediction using clinical notes from the MIMIC-III dataset labeled with ICD-9 codes. Our approach combines interpretable text-based features with a novel pattern discovery and disentanglement algorithm. The method uncovers strong association patterns between clinical notes and diseases, surpasses baseline clustering algorithms in distinguishing disease clusters, and demonstrates comparable performance to supervised methods in predicting diseases. Our results validate the model's capability to balance interpretability with outcome prediction accuracy, unveiling insightful patterns between clinical notes and diseases while maintaining reasonable diagnostic accuracy.</p>
+                        </div>
+                    </article>
+
+                    <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap">
+                                <img src="images/healthy-vs-ad.png" alt="Speaker Verification thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">Factors Affecting the Performance of Automated Speaker Verification in Alzheimer's Disease Clinical Trials</h3>
+                                <p class="pub-authors"><strong>Malikeh Ehghaghi</strong>, Marija Stanojevic, Ali Akram, Jekaterina Novikova</p>
+                                <p class="pub-venue-line"><em>ClinicalNLP 2023 (ACL Workshop)</em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://aclanthology.org/2023.clinicalnlp-1.27/" class="pub-action-link">Paper</a>
+                                    <a href="https://aclanthology.org/2023.clinicalnlp-1.27.bib" class="pub-action-link">BibTeX</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pub-abstract hidden">
+                            <p>Detecting duplicate patient participation in clinical trials is a major challenge because repeated patients can undermine the credibility and accuracy of the trial’s findings and result in significant health and financial risks. Developing accurate automated speaker verification (ASV) models is crucial to verify the identity of enrolled individuals and remove duplicates, but the size and quality of data influence ASV performance. However, there has been limited investigation into the factors that can affect ASV capabilities in clinical environments. In this paper, we bridge the gap by conducting analysis of how participant demographic characteristics, audio quality criteria, and severity level of Alzheimer’s disease (AD) impact the performance of ASV utilizing a dataset of speech recordings from 659 participants with varying levels of AD, obtained through multiple speech tasks. Our results indicate that ASV performance: 1) is slightly better on male speakers than on female speakers; 2) degrades for individuals who are above 70 years old; 3) is comparatively better for non-native English speakers than for native English speakers; 4) is negatively affected by clinician interference, noisy background, and unclear participant speech; 5) tends to decrease with an increase in the severity level of AD. Our study finds that voice biometrics raise fairness concerns as certain subgroups exhibit different ASV performances owing to their inherent voice characteristics. Moreover, the performance of ASV is influenced by the quality of speech recordings, which underscores the importance of improving the data collection settings in clinical trials.</p>
+                        </div>
+                    </article>
+
+                    <!-- 2022 -->
+                    <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap">
+                                <img src="images/depac.png" alt="DEPAC thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">DEPAC: a Corpus for Depression and Anxiety Detection from Speech</h3>
+                                <p class="pub-authors">Mashrura Tasnim, <strong>Malikeh Ehghaghi</strong>, Brian Diep, Jekaterina Novikova</p>
+                                <p class="pub-venue-line"><em>CLPsych 2022 (NAACL Workshop)</em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://aclanthology.org/2022.clpsych-1.1/" class="pub-action-link">Paper</a>
+                                    <a href="https://underline.io/lecture/55900-depac-a-corpus-for-depression-and-anxiety-detection-from-speech" class="pub-action-link">Video</a>
+                                    <a href="https://aclanthology.org/2022.clpsych-1.1.bib" class="pub-action-link">BibTeX</a>
+                                </div>
+                            </div>
+                            <div class="pub-year">2022</div>
+                        </div>
+                        <div class="pub-abstract hidden">
+                            <p>Mental distress like depression and anxiety contribute to the largest proportion of the global burden of diseases. Automated diagnosis system of such disorders, empowered by recent innovations in Artificial Intelligence, can pave the way to reduce the sufferings of the affected individuals. Development of such systems requires information-rich and balanced corpora. In this work, we introduce a novel mental distress analysis audio dataset DEPAC, labelled based on established thresholds on depression and anxiety standard screening tools. This large dataset comprises multiple speech tasks per individual, as well as relevant demographic information. Alongside, we present a feature set consisting of hand-curated acoustic and linguistic features, which were found effective in identifying signs of mental illnesses in human speech. Finally, we justify the quality and effectiveness of our proposed audio corpus and feature set in predicting depression severity by comparing the performance of baseline machine learning models built on this dataset with baseline models trained on other well-known depression corpora.</p>
+                    </article>
+
+                    <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap">
+                                <img src="images/clustering.png" alt="Clustering thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">Data-driven Approach to Differentiating between Depression and Dementia from Noisy Speech and Language Data</h3>
+                                <p class="pub-authors"><strong>Malikeh Ehghaghi</strong>, Frank Rudzicz, Jekaterina Novikova</p>
+                                <p class="pub-venue-line"><em>W-NUT 2022 (EMNLP Workshop)</em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://aclanthology.org/2022.wnut-1.3/" class="pub-action-link">Paper</a>
+                                    <a href="https://www.youtube.com/watch?v=PE05AxhWcOQ" class="pub-action-link">Video</a>
+                                    <a href="https://aclanthology.org/2022.wnut-1.3.bib" class="pub-action-link">BibTeX</a>
+                                </div>
+                            </div>
+                            <div class="pub-year"></div>
+                        </div>
+                        <div class="pub-abstract hidden">
+                            <p>A significant number of studies apply acoustic and linguistic characteristics of human speech as prominent markers of dementia and depression. However, studies on discriminating depression from dementia are rare. Co-morbid depression is frequent in dementia and these clinical conditions share many overlapping symptoms, but the ability to distinguish between depression and dementia is essential as depression is often curable. In this work, we investigate the ability of clustering approaches in distinguishing between depression and dementia from human speech. We introduce a novel aggregated dataset, which combines narrative speech data from multiple conditions, i.e., Alzheimer’s disease, mild cognitive impairment, healthy control, and depression. We compare linear and non-linear clustering approaches and show that non-linear clustering techniques distinguish better between distinct disease clusters. Our interpretability analysis shows that the main differentiating symptoms between dementia and depression are acoustic abnormality, repetitiveness (or circularity) of speech, word finding difficulty, coherence impairment, and differences in lexical complexity and richness.</p>
                         </div>
                     </article>
 
@@ -92,5 +283,53 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Abstract toggles
+        document.querySelectorAll('.pub-abs-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var abstract = btn.closest('.publication').querySelector('.pub-abstract');
+                abstract.classList.toggle('hidden');
+                btn.textContent = abstract.classList.contains('hidden') ? 'Abstract' : 'Abstract ▲';
+            });
+        });
+
+        // Lightbox
+        (function () {
+            var overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.right = '0';
+            overlay.style.bottom = '0';
+            overlay.style.background = 'rgba(255,255,255,0.97)';
+            overlay.style.zIndex = '9999';
+            overlay.style.display = 'none';
+            overlay.style.alignItems = 'center';
+            overlay.style.justifyContent = 'center';
+            overlay.style.cursor = 'zoom-out';
+
+            var img = document.createElement('img');
+            img.style.maxWidth = '90vw';
+            img.style.maxHeight = '90vh';
+            img.style.objectFit = 'contain';
+            img.style.borderRadius = '6px';
+            img.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)';
+            overlay.appendChild(img);
+            document.body.appendChild(overlay);
+
+            document.querySelectorAll('.pub-thumb-wrap').forEach(function (wrap) {
+                wrap.addEventListener('click', function () {
+                    var thumb = wrap.querySelector('.pub-thumb');
+                    if (!thumb) return;
+                    img.src = thumb.src;
+                    overlay.style.display = 'flex';
+                });
+            });
+
+            overlay.addEventListener('click', function () {
+                overlay.style.display = 'none';
+            });
+        })();
+    </script>
 </body>
 </html>

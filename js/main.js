@@ -144,6 +144,8 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
+
+
     // Persian Music Player
     const musicToggle = document.getElementById('music-toggle');
     const persianMusic = document.getElementById('persian-music');
