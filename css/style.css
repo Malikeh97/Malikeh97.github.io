@@ -707,28 +707,29 @@ em {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 4px;
-    margin-top: 6px;
+    gap: 6px;
+    margin-top: 10px;
 }
 
 .pub-abs-btn {
     display: inline-block;
-    background: none;
-    border: 1px solid var(--color-terra-cotta);
-    padding: 2px 10px;
-    border-radius: 4px;
+    background: var(--color-terra-cotta);
+    border: 1.5px solid var(--color-terra-cotta);
+    padding: 4px 14px;
+    border-radius: 20px;
     font-family: inherit;
     font-size: 0.78rem;
     font-weight: 600;
     line-height: 1.5;
-    color: var(--color-terra-cotta);
+    color: var(--color-white);
     cursor: pointer;
     letter-spacing: 0.04em;
-    transition: background var(--transition-fast), color var(--transition-fast);
+    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .pub-abs-btn:hover {
-    background: var(--color-terra-cotta);
+    background: #6D1B16;
+    border-color: #6D1B16;
     color: var(--color-white);
 }
 
@@ -738,15 +739,17 @@ em {
     font-weight: 600;
     line-height: 1.5;
     color: var(--color-terra-cotta);
-    border: 1px solid var(--color-terra-cotta);
-    padding: 2px 10px;
-    border-radius: 4px;
+    border: 1.5px solid var(--color-terra-cotta);
+    background: transparent;
+    padding: 4px 14px;
+    border-radius: 20px;
     letter-spacing: 0.04em;
-    transition: background var(--transition-fast), color var(--transition-fast);
+    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .pub-action-link:hover {
     background: var(--color-terra-cotta);
+    border-color: var(--color-terra-cotta);
     color: var(--color-white);
 }
 

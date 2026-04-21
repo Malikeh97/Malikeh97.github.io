@@ -36,11 +36,19 @@
     </nav>
 
     <main>
-        <section class="page-header">
+        <section class="page-header" style="background: #6D1B16; color: #fff;">
             <div class="container">
-                <h1>Publications</h1>
-                <p class="page-intro">Research papers and academic publications. <br>
-                    For the full list, visit my <a href="https://scholar.google.com/citations?user=les29Z8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> page.</p>
+                <div style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:90px; height:90px; flex-shrink:0;" aria-label="Google Scholar">
+                        <!-- Graduation cap -->
+                        <path fill="rgba(255,255,255,0.9)" d="M256 32L0 160l96 48v112c0 26.5 71.6 64 160 64s160-37.5 160-64V208l64-32V320h32V160L256 32zm140.1 128L256 231.9 115.9 160 256 88.1 396.1 160zM352 320c0 9.6-41.3 32-96 32s-96-22.4-96-32v-89.6l96 48 96-48V320z"/>
+                    </svg>
+                    <div>
+                        <h1 style="color: #fff;">Publications</h1>
+                        <p class="page-intro" style="color: rgba(255,255,255,0.85); margin:0;">Research papers and academic publications. <br>
+                            For the full list, visit my <a href="https://scholar.google.com/citations?user=les29Z8AAAAJ&hl=en" target="_blank" rel="noopener" style="color: #fff; text-decoration: underline;">Google Scholar</a> page.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -270,6 +278,26 @@ model checkpoints. </p>
                         </div>
                         <div class="pub-abstract hidden">
                             <p>A significant number of studies apply acoustic and linguistic characteristics of human speech as prominent markers of dementia and depression. However, studies on discriminating depression from dementia are rare. Co-morbid depression is frequent in dementia and these clinical conditions share many overlapping symptoms, but the ability to distinguish between depression and dementia is essential as depression is often curable. In this work, we investigate the ability of clustering approaches in distinguishing between depression and dementia from human speech. We introduce a novel aggregated dataset, which combines narrative speech data from multiple conditions, i.e., Alzheimer’s disease, mild cognitive impairment, healthy control, and depression. We compare linear and non-linear clustering approaches and show that non-linear clustering techniques distinguish better between distinct disease clusters. Our interpretability analysis shows that the main differentiating symptoms between dementia and depression are acoustic abnormality, repetitiveness (or circularity) of speech, word finding difficulty, coherence impairment, and differences in lexical complexity and richness.</p>
+                        </div>
+                    </article>
+
+                    <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap">
+                                <img src="images/amai2022.png" alt="AMAI 2022 thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">Benchmarking Prognostic Longitudinal Machine Learning Models of Alzheimer's Disease Using Speech Features</h3>
+                                <p class="pub-authors"><strong>Malikeh Ehghaghi</strong>, Jekaterina Novikova, Arindam Sett, Mohsen Hejrati, Jessica Robin, Edmond Teng, Somaye Hashemifar</p>
+                                <p class="pub-venue-line"><em><a href="https://sites.google.com/view/amai2022/home" target="_blank" rel="noopener" style="color: inherit;">Applications of Medical AI (AMAI) 2022 (MICCAI Workshop)</a></em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://sites.google.com/view/amai2022/home" class="pub-action-link" target="_blank" rel="noopener">Workshop</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pub-abstract hidden">
+                            <p>We benchmark machine learning models for predicting longitudinal disease progression in Alzheimer's disease (AD) using spoken language from CDR interviews. Analyzing speech and CDR-SB data from 54 participants with prodromal-to-mild AD (Tauriel study, NCT03289143) across five visits over 18 months, we extracted 520 acoustic and linguistic features and identified cross-sectional and prognostic feature subsets. Using features from screening through month 12, we trained Mixed Effects Random Forest (MERF) and Long Short-Term Memory (LSTM) models to predict CDR-SB change at month 18. Both models achieved under 2.7 points MAE (CDR-SB range: 0–18), with MERF outperforming LSTM and a no-change baseline on held-out test sets. Cross-sectional speech features—strongly correlated with CDR-SB scores—proved more effective predictors of 18-month cognitive decline than prognostic features. These results demonstrate that nonlinear mixed-effects models applied to speech biomarkers offer a generalizable and efficient approach to longitudinal AD prognosis, with implications for both drug development and clinical care.</p>
                         </div>
                     </article>
 
