@@ -793,13 +793,25 @@ em {
         flex-direction: column;
     }
 
+    .pub-row {
+        flex-direction: column;
+    }
+
     .pub-thumb-wrap {
         width: 100%;
         flex: none;
     }
 
     .pub-thumb {
-        height: 160px;
+        height: 180px;
+    }
+
+    .pub-year {
+        display: none;
+    }
+
+    .pub-actions {
+        flex-wrap: wrap;
     }
 }
 
