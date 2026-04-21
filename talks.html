@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Talks & Presentations - Malikeh Ehghaghi">
-    <title>Talks | Malikeh Ehghaghi</title>
+    <title>Talks/Panels | Malikeh Ehghaghi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=2">
+    <style>
+        .talk-role {
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #1B4332;
+            margin: 2px 0 6px;
+        }
+        .talk-location {
+            font-size: 0.82rem;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -23,7 +39,7 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="publications.html" class="nav-link">Publications</a></li>
-                <li><a href="talks.html" class="nav-link active">Talks</a></li>
+                <li><a href="talks.html" class="nav-link active">Talks/Panels</a></li>
                 <li><a href="podcast.html" class="nav-link">WiAIR Podcast</a></li>
                 <li><a href="teaching.html" class="nav-link">Teaching</a></li>
                 <li><a href="group.html" class="nav-link">Mentorship</a></li>
@@ -36,10 +52,17 @@
     </nav>
 
     <main>
-        <section class="page-header">
+        <section class="page-header" style="background: #1B4332; color: #fff;">
             <div class="container">
-                <h1>Talks & Presentations</h1>
-                <p class="page-intro">Conference talks, invited presentations, panels, and workshops.</p>
+                <div style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:80px; height:80px; flex-shrink:0;" aria-label="Microphone">
+                        <path fill="rgba(255,255,255,0.9)" d="M12 1a4 4 0 0 1 4 4v6a4 4 0 0 1-8 0V5a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v6a2 2 0 0 0 4 0V5a2 2 0 0 0-2-2zm7 8a1 1 0 0 1 1 1 8 8 0 0 1-7 7.938V22h2a1 1 0 0 1 0 2H9a1 1 0 0 1 0-2h2v-2.062A8 8 0 0 1 4 12a1 1 0 0 1 2 0 6 6 0 0 0 12 0 1 1 0 0 1 1-1z"/>
+                    </svg>
+                    <div>
+                        <h1 style="color: #fff;">Talks & Panels</h1>
+                        <p class="page-intro" style="color: rgba(255,255,255,0.85); margin:0;">Conference talks, invited presentations, panels, and workshops.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -51,7 +74,8 @@
                     <article class="talk featured">
                         <div class="talk-content">
                             <span class="talk-venue">Build With AI: Women in Tech conference 2026</span>
-                            <h3 class="talk-title">Women in Industry Research - Panel</h3>
+                            <h3 class="talk-title">Women in Industry Research</h3>
+                            <p class="talk-role">Panel Speaker</p>
                             <p class="talk-description">
                                 By Google Developer Groups (University of Toronto) &amp; ACM-W: ACM's Women in Computing
                             </p>
@@ -64,13 +88,15 @@
                             <img src="images/wit2026-2.png" alt="WIT Conference 2026">
                             <img src="images/wit2026-4.png" alt="WIT Conference 2026">
                         </div>
+                        <p class="talk-location">Shopify, Toronto, ON, Canada</p>
                     </article>
 
                     <!-- 2025 -->
                     <article class="talk featured">
                         <div class="talk-content">
                             <span class="talk-venue">NeurIPS 2025</span>
-                            <h3 class="talk-title">Model Merging: Theory, Practice and Applications - Tutorial</h3>
+                            <h3 class="talk-title">Model Merging: Theory, Practice and Applications</h3>
+                            <p class="talk-role">Tutorial Speaker & Panel Moderator</p>
                             <div class="talk-links">
                                 <a href="https://neurips.cc/virtual/2025/loc/san-diego/109593" class="talk-link" target="_blank" rel="noopener">Talk Recording</a>
                             </div>
@@ -80,13 +106,15 @@
                             <img src="images/neurips2025-2.png" alt="NeurIPS 2025 Tutorial">
                             <img src="images/neurips2025-3.png" alt="NeurIPS 2025 Tutorial">
                         </div>
+                        <p class="talk-location">San Diego, CA, USA</p>
                     </article>
 
                     <article class="talk featured">
                         <div class="talk-content">
                             <span class="talk-venue">MLOps World | Gen AI Summit 2025</span>
                             <span class="talk-venue">Toronto Machine Learning Summit (TMLS) 2025</span>
-                            <h3 class="talk-title">Scaling Down, Powering Up: Can Efficient Training Beat Scaling Laws? - Webinar + Workshop</h3>
+                            <h3 class="talk-title">Scaling Down, Powering Up: Can Efficient Training Beat Scaling Laws?</h3>
+                            <p class="talk-role">Speaker</p>
                             <div class="talk-links">
                                 <a href="https://youtu.be/UE_w2QVqhTY?si=ZxqnblfloW9Zy4q8" class="talk-link" target="_blank" rel="noopener">Talk Recording</a>
                             </div>
@@ -96,12 +124,14 @@
                             <img src="images/mlops2025-me.png" alt="MLOps World 2025 - 2">
                             <img src="images/mlops2025-3.png" alt="MLOps World 2025 - 3">
                         </div>
+                        <p class="talk-location">Toronto, ON, Canada</p>
                     </article>
 
                     <article class="talk featured">
                         <div class="talk-content">
                             <span class="talk-venue">Girls in Tech Conference (GITCon) 2025</span>
-                            <h3 class="talk-title">Female Leaders in the GTA in Tech - Panel</h3>
+                            <h3 class="talk-title">Female Leaders in the GTA in Tech</h3>
+                            <p class="talk-role">Panel Speaker</p>
                             <div class="talk-links">
                                 <a href="https://www.girlsintechcon.com/gitcon-2025-speakers" class="talk-link" target="_blank" rel="noopener">Event Website</a>
                             </div>
@@ -111,12 +141,14 @@
                             <img src="images/gitcon2025-2.png" alt="GITCon 2025">
                             <img src="images/gitcon2025-3.png" alt="GITCon 2025">
                         </div>
+                        <p class="talk-location">Toronto, ON, Canada</p>
                     </article>
 
                     <article class="talk featured">
                         <div class="talk-content">
                             <span class="talk-venue">Women in Tech (WIT) Conference 2025</span>
-                            <h3 class="talk-title">From Bias to Brilliance: How Women Are Rewriting the Rules of AI? - Talk</h3>
+                            <h3 class="talk-title">From Bias to Brilliance: How Women Are Rewriting the Rules of AI?</h3>
+                            <p class="talk-role">Keynote Speaker</p>
                             <p class="talk-description">
                                 By Google Developer Groups (GDG) &amp; ACM-W: ACM's Women in Computing
                             </p>
@@ -129,6 +161,7 @@
                             <img src="images/bias-2.png" alt="WIT Conference 2025">
                             <img src="images/bias-3.png" alt="WIT Conference 2025">
                         </div>
+                        <p class="talk-location">Toronto, ON, Canada</p>
                     </article>
 
                     <!-- <article class="talk featured">
@@ -141,7 +174,8 @@
                     <article class="talk featured">
                         <div class="talk-content">
                             <span class="talk-venue">WILS &amp; Toronto ACM-W Professional Chapter, Vanguard, 2025</span>
-                            <h3 class="talk-title">Toronto ACM-W Professional Chapter Launch - Opening Talk</h3>
+                            <h3 class="talk-title">Toronto ACM-W Professional Chapter Launch</h3>
+                            <p class="talk-role">Opening Talk Speaker</p>
                             <p class="talk-description">Joint event by Women's Initiative for Leadership Success (WILS) and Toronto ACM-W Professional Chapter</p>
                             <div class="talk-links">
                                 <a href="https://www.linkedin.com/company/toronto-acm-w-professional-chapter/?viewAsMember=true" class="talk-link" target="_blank" rel="noopener">Toronto ACM-W Professional Chapter</a>
@@ -152,12 +186,14 @@
                             <img src="images/vanguard-2.png" alt="WILS & ACM-W at Vanguard 2025">
                             <img src="images/vanguard-3.png" alt="WILS & ACM-W at Vanguard 2025">
                         </div>
+                        <p class="talk-location">Vanguard, Toronto, ON, Canada</p>
                     </article>
 
                     <article class="talk featured">
                         <div class="talk-content">
                             <span class="talk-venue">MScAC Orientation, University of Toronto, 2025</span>
-                            <h3 class="talk-title">MScAC Alumni - Panel</h3>
+                            <h3 class="talk-title">MScAC Alumni Panel</h3>
+                            <p class="talk-role">Panel Speaker</p>
                             <div class="talk-links">
                                 <a href="https://mscac.utoronto.ca/orientation/" class="talk-link" target="_blank" rel="noopener">Event Website</a>
                             </div>
@@ -167,21 +203,44 @@
                             <img src="images/mscac-2.png" alt="MScAC Orientation 2025">
                             <img src="images/mscac-3.png" alt="MScAC Orientation 2025">
                         </div>
+                        <p class="talk-location">University of Toronto, Toronto, ON, Canada</p>
                     </article>
 
                     <!-- 2024 -->
-                    <!-- <article class="talk">
+                    <article class="talk">
                         <div class="talk-content">
-                            <span class="talk-venue">Arcee.ai, 2024</span>
-                            <h3 class="talk-title">The Small Language Model (SLM) Show</h3>
+                            <span class="talk-venue">The Small Language Model (SLM) Show, Arcee AI, 2024</span>
+                            <h3 class="talk-title">LLM Efficiency: What Does It Mean and Can Smaller Models Compete?</h3>
+                            <p class="talk-role">Panel Moderator & Co-host</p>
+                            <p class="talk-description">
+                                Co-hosted with <a href="https://www.youtube.com/juliensimonfr" target="_blank" rel="noopener"><strong>Julien Simon</strong></a>. A discussion on language model efficiency, the trade-off between model size, accuracy, and performance, with guests <a href="https://jeknov.github.io/" target="_blank" rel="noopener"><strong>Jekaterina Novikova</strong></a> (Principal AI Scientist, Vanguard) and <a href="https://www.linkedin.com/in/iammilica/" target="_blank" rel="noopener"><strong>Milica Cvetkovic</strong></a> (Applied AI Solutions Lead, Google).
+                            </p>
+                            <div class="talk-links">
+                                <a href="https://www.youtube.com/watch?v=sMozz3_Sm-U&list=PL9nVrQlV00eoTZcn8J9u7tE--u_P6F4PO&index=11" class="talk-link" target="_blank" rel="noopener">Watch on YouTube</a>
+                            </div>
                         </div>
-                    </article> -->
+                        <p class="talk-location">Virtual Event (San Francisco, CA, USA)</p>
+                    </article>
+
+                    <article class="talk">
+                        <div class="talk-content">
+                            <span class="talk-venue">Machine Learning for Cognitive and Mental Health (ML4CMH) Workshop, AAAI 2024</span>
+                            <h3 class="talk-title">ML4CMH Workshop</h3>
+                            <p class="talk-role">Program Co-chair</p>
+                            <p class="talk-description">A workshop addressing the urgent need for ML systems that better understand cognitive and mental health through diverse biomarkers — from speech and EEG to health records and wearables. Brought together experts in multimodal learning, clinical NLP, and AI safety with a focus on robustness, interpretability, and low-resource settings.</p>
+                            <div class="talk-links">
+                                <a href="https://winterlightlabs.github.io/ml4cmh2024/" class="talk-link" target="_blank" rel="noopener">Workshop Website</a>
+                                <a href="https://ceur-ws.org/Vol-3649/preface.pdf" class="talk-link" target="_blank" rel="noopener">Preface</a>
+                            </div>
+                        </div>
+                    </article>
 
                     <!-- 2023 -->
                     <article class="talk">
                         <div class="talk-content">
                             <span class="talk-venue">5th Clinical NLP Workshop, ACL 2023</span>
-                            <h3 class="talk-title">Factors Affecting the Performance of Automated Speaker Verification in Alzheimer's Disease Clinical Trials - Oral Presentation</h3>
+                            <h3 class="talk-title">Factors Affecting the Performance of Automated Speaker Verification in Alzheimer's Disease Clinical Trials</h3>
+                            <p class="talk-role">Speaker</p>
                             <div class="talk-links">
                                 <a href="https://clinical-nlp.github.io/2023/program.html" class="talk-link" target="_blank" rel="noopener">Workshop Website</a>
                             </div>
@@ -191,18 +250,21 @@
                             <img src="images/acl2023-2.png" alt="ACL 2023">
                             <img src="images/acl2023-3.png" alt="ACL 2023">
                         </div>
+                        <p class="talk-location">Toronto, ON, Canada</p>
                     </article>
 
                     <article class="talk">
                         <div class="talk-content">
                             <span class="talk-venue">ACL 2023, Birds-of-a-Feather Session(s)</span>
-                            <h3 class="talk-title">Low Resource Languages - Discussion Moderation </h3>
-                            <h3 class="talk-title">Interpretability and Fairness of the Large Language Models - Discussion Moderation</h3>
+                            <h3 class="talk-title">Low Resource Languages</h3>
+                            <h3 class="talk-title">Interpretability and Fairness of the Large Language Models</h3>
+                            <p class="talk-role">Discussion Moderator</p>
                         <div class="talk-photos">
                             <img src="images/social-1.png" alt="ACL 2023 Social Event">
                             <img src="images/social-2.png" alt="ACL 2023 Social Event">
                             <img src="images/bof-1.png" alt="ACL 2023 Social Event">
                         </div>
+                        <p class="talk-location">Toronto, ON, Canada</p>
                     </article>
 
                     <!-- <article class="talk">
@@ -222,7 +284,8 @@
                     <article class="talk">
                         <div class="talk-content">
                             <span class="talk-venue">8th Workshop on Noisy User-generated Text, COLING 2022</span>
-                            <h3 class="talk-title">Data-driven Approach to Differentiating between Depression and Dementia from Noisy Speech and Language Data - Oral Presentation</h3>
+                            <h3 class="talk-title">Data-driven Approach to Differentiating between Depression and Dementia from Noisy Speech and Language Data</h3>
+                            <p class="talk-role">Speaker</p>
                             <div class="talk-links">
                                 <a href="https://youtu.be/PE05AxhWcOQ?si=FOPttXXlOo-9P_YB" class="talk-link" target="_blank" rel="noopener">Talk Recording</a>
                                 <a href="https://noisy-text.github.io/2022/index.html" class="talk-link" target="_blank" rel="noopener">Workshop Website</a>
@@ -245,7 +308,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" style="background-color: #1B4332;">
         <div class="container">
             <p>&copy; 2025 Malikeh Ehghaghi. All rights reserved.</p>
         </div>
