@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Women in AI Research Podcast - Malikeh Ehghaghi">
+    <title>Podcast | Malikeh Ehghaghi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <style>
+        .podcast-header-info {
+            max-width: 700px;
+            margin: 0 auto var(--spacing-lg);
+            text-align: center;
+        }
+
+        .podcast-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-top: var(--spacing-sm);
+            align-items: center;
+        }
+
+        .podcast-platform-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-decoration: none;
+            transition: opacity 0.15s ease;
+        }
+
+        .podcast-platform-link svg {
+            flex-shrink: 0;
+        }
+
+        .podcast-platform-link:hover {
+            opacity: 0.7;
+        }
+
+        .podcast-platform-link.youtube  { color: #FF0000; }
+        .podcast-platform-link.spotify  { color: #1DB954; }
+        .podcast-platform-link.apple    { color: #000000; }
+        .podcast-platform-link.linkedin { color: #0A66C2; }
+        .podcast-platform-link.twitter  { color: #000000; }
+        .podcast-platform-link.bluesky  { color: #0085FF; }
+
+        .episodes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .episode {
+            display: flex;
+            flex-direction: column;
+            background: var(--color-white);
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(47, 38, 26, 0.09);
+            overflow: hidden;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .episode:hover {
+            box-shadow: 0 6px 24px rgba(47, 38, 26, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .episode-thumb {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .episode-info {
+            padding: 14px 16px 16px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .episode-number {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.07em;
+            color: rgba(109, 27, 22, 0.4);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .episode-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--color-brown-gray);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .episode-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .episode-title a:hover {
+            color: #7B4FA6;
+        }
+
+        .episode-guest {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 4px;
+        }
+
+        .episode-guest a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .episode-guest a:hover {
+            color: #7B4FA6;
+        }
+
+        .episode-date {
+            font-size: 0.78rem;
+            color: var(--color-text-light);
+            margin-top: auto;
+        }
+
+        @media (max-width: 700px) {
+            .episodes-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 420px) {
+            .episodes-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">ME</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="talks.html" class="nav-link">Talks</a></li>
+                <li><a href="podcast.html" class="nav-link active">Podcast</a></li>
+                <li><a href="teaching.html" class="nav-link">Teaching</a></li>
+                <li><a href="group.html" class="nav-link">Mentorship</a></li>
+                <li><a href="women-in-tech.html" class="nav-link">Women in Tech</a></li>
+                <li><a href="techrun.html" class="nav-link">Techrun</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="fun-facts.html" class="nav-link">Fun Facts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Women in AI Research (WiAIR) Podcast</h1>
+                <p class="page-intro">A podcast spotlighting the voices of women shaping the future of AI research.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <div class="podcast-header-info">
+                    <p>In 2025, I proudly co-hosted the Women in AI Research (WiAIR) podcast alongside <a href="https://jeknov.github.io/" target="_blank" rel="noopener">Jekaterina Novikova</a>. In each episode, we spoke with accomplished women in AI from diverse backgrounds, highlighting their research, personal journeys, and perspectives on real-world impact—aiming to inspire and empower the next generation of women in the field.</p>
+                    <div class="podcast-links">
+                        <a href="https://www.youtube.com/@WomeninAIResearch" class="podcast-platform-link youtube" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            YouTube
+                        </a>
+                        <a href="https://open.spotify.com/show/51RJNlZarFTJXXIlz5Qx3M" class="podcast-platform-link spotify" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                            Spotify
+                        </a>
+                        <a href="https://podcasts.apple.com/ca/podcast/women-in-ai-research-wiair/id1805993416" class="podcast-platform-link apple" target="_blank" rel="noopener">
+                            <img src="images/apple.png" alt="Apple Podcasts" width="20" height="20" style="object-fit:contain;">
+                            Apple Podcasts
+                        </a>
+                        <a href="https://www.linkedin.com/company/women-in-ai-research/posts/?feedView=all" class="podcast-platform-link linkedin" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://x.com/WiAIR_podcast" class="podcast-platform-link twitter" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            X
+                        </a>
+                        <a href="https://bsky.app/profile/wiair.bsky.social" class="podcast-platform-link bluesky" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 01-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
+                            Bluesky
+                        </a>
+                    </div>
+                </div>
+
+                <div class="episodes-grid">
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode1.png" alt="Episode 1 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="https://youtu.be/SL8reoM8pGE?si=snC4i5HRB5TOZSyL" target="_blank" rel="noopener">Limits of Transformers</a></div>
+                            <div class="episode-guest"><a href="https://nouhadziri.github.io/" target="_blank" rel="noopener">Nouha Dziri</a></div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode2.png" alt="Episode 2 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="https://youtu.be/Gazs9u_XucE?si=QVGYEkyPyvItYnGN" target="_blank" rel="noopener">Bias in AI</a></div>
+                            <div class="episode-guest"><a href="https://amandacurry.github.io/" target="_blank" rel="noopener">Amanda Cercas Curry</a></div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode3.png" alt="Episode 3 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="https://youtu.be/DEdJltlFg4I?si=dbgC5m9jNsJMY576" target="_blank" rel="noopener">Responsible AI for Health</a></div>
+                            <div class="episode-guest"><a href="https://aparna-b.github.io/researcher/" target="_blank" rel="noopener">Aparna Balagopalan</a></div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode4.png" alt="Episode 4 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="https://youtu.be/Z8VBnZmSUto?si=rOQuDjZEPjGEWVsg" target="_blank" rel="noopener">Robots with Empathy</a></div>
+                            <div class="episode-guest"><a href="https://www.rosielab.ca/team" target="_blank" rel="noopener">Angelica Lim</a></div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode5.png" alt="Episode 5 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="https://youtu.be/osHrYXwCvpQ?si=t_1pBpdRamCTSAp-" target="_blank" rel="noopener">Interpretable AI</a></div>
+                            <div class="episode-guest"><a href="https://www.linkedin.com/in/faiza-khan-khattak/" target="_blank" rel="noopener">Faiza Khan Khattak</a></div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode6.png" alt="Episode 6 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="https://youtu.be/pq4km-unw_M?si=w6CQkbU_yInikYt2" target="_blank" rel="noopener">Decentralized AI</a></div>
+                            <div class="episode-guest"><a href="https://ryan0v0.github.io/" target="_blank" rel="noopener">Wanru Zhao</a></div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode7.png" alt="Episode 7 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="https://youtu.be/CuTWIW1JcsA?si=9P2USAjXGleUrAne" target="_blank" rel="noopener">Generalization in AI</a></div>
+                            <div class="episode-guest"><a href="https://dieuwkehupkes.nl/" target="_blank" rel="noopener">Dieuwke Hupkes</a></div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode8.png" alt="Episode 8 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="https://youtu.be/QPp0cJNBbL8?si=isxlgDO3yOjYFtuo" target="_blank" rel="noopener">LLM Hallucinations and Machine Unlearning</a></div>
+                            <div class="episode-guest"><a href="https://lasharavichander.github.io/" target="_blank" rel="noopener">Abhilasha Ravichander</a></div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode9.png" alt="Episode 9 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="https://youtu.be/IalFROkCH0c?si=QkrFyNNEodzkiifG" target="_blank" rel="noopener">Unlocking LLM Reasoning</a></div>
+                            <div class="episode-guest"><a href="https://sophiahan6.github.io/" target="_blank" rel="noopener">Simeng Sophia Han</a></div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode10.png" alt="Episode 10 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="https://youtu.be/DPhqm1EHxtU?si=djKjejg9limFONPi" target="_blank" rel="noopener">Open Science and LLMs</a></div>
+                            <div class="episode-guest"><a href="https://valentinapy.github.io/" target="_blank" rel="noopener">Valentina Pyatkin</a></div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode11.png" alt="Episode 11 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="#" target="_blank" rel="noopener">TBA</a></div>
+                            <div class="episode-guest">TBA</div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode12.png" alt="Episode 12 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="#" target="_blank" rel="noopener">TBA</a></div>
+                            <div class="episode-guest">TBA</div>
+                        </div>
+                    </div>
+
+                    <div class="episode">
+                        <img class="episode-thumb" src="images/yt-Episode13.png" alt="Episode 13 thumbnail">
+                        <div class="episode-info">
+                            <div class="episode-title"><a href="#" target="_blank" rel="noopener">TBA</a></div>
+                            <div class="episode-guest">TBA</div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Malikeh Ehghaghi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
