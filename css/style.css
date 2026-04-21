@@ -1159,7 +1159,7 @@ em {
 
 .footer {
     padding: var(--spacing-lg) 0;
-    background-color: var(--color-brown-gray);
+    background-color: #6D1B16;
     color: var(--color-white);
     text-align: center;
 }
