@@ -167,12 +167,7 @@ em {
 }
 
 .section-title::after {
-    content: '◆';
-    display: block;
-    font-size: 0.5rem;
-    letter-spacing: 0.5rem;
-    color: var(--color-terra-cotta);
-    margin: var(--spacing-sm) auto 0;
+    content: '';
 }
 
 /* Persian-inspired decorative divider */
@@ -212,10 +207,11 @@ em {
     left: 0;
     right: 0;
     height: var(--nav-height);
-    background-color: rgba(250, 248, 245, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: #ffffff;
+    backdrop-filter: blur(12px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(30, 58, 95, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
     transition: all var(--transition-medium);
 }
 
@@ -232,9 +228,10 @@ em {
 .nav-logo {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--color-brown-gray);
-    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: #002A5C;
+    letter-spacing: 0.08em;
+    transition: color var(--transition-medium);
 }
 
 .nav-logo:hover {
@@ -244,34 +241,31 @@ em {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: var(--spacing-md);
+    gap: 0.25rem;
+    align-items: center;
 }
 
 .nav-link {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: var(--color-text);
-    padding: var(--spacing-xs) 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #444;
+    padding: 6px 12px;
+    border-radius: 20px;
     position: relative;
+    transition: background 0.2s, color 0.2s;
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: var(--color-terra-cotta);
-    transition: width var(--transition-medium);
+    display: none;
 }
 
 .nav-link:hover {
-    color: var(--color-terra-cotta);
+    background: rgba(0, 42, 92, 0.07);
+    color: #002A5C;
 }
 
 .nav-link:hover::after {
-    width: 100%;
+    width: 0;
 }
 
 .nav-toggle {
@@ -1435,8 +1429,8 @@ em {
 }
 
 .group-member .member-photo {
-    width: 90px;
-    height: 90px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
@@ -1452,6 +1446,15 @@ em {
     font-size: 1rem;
     font-weight: 600;
     margin: 0;
+}
+
+.member-role {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #B5294E;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 3px 0 2px;
 }
 
 .group-member .member-bio {
@@ -1549,11 +1552,17 @@ em {
 
 /* Active Nav Link */
 .nav-link.active {
-    color: var(--color-terra-cotta);
+    background: #002A5C;
+    color: #fff;
 }
 
 .nav-link.active::after {
-    width: 100%;
+    display: none;
+}
+
+.nav-link.active:hover {
+    background: #002A5C;
+    color: #fff;
 }
 
 /* TechRun Header Special */
