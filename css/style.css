@@ -246,7 +246,7 @@ em {
 }
 
 .nav-link {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 500;
     color: #444;
     padding: 6px 12px;
@@ -1563,6 +1563,25 @@ em {
 .nav-link.active:hover {
     background: #002A5C;
     color: #fff;
+}
+
+.nav-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    order: -1;
+    margin-left: 0.75rem;
+    margin-right: auto;
+}
+
+.nav-social a {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.nav-social a:hover {
+    opacity: 0.7;
 }
 
 /* TechRun Header Special */

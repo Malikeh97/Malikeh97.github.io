@@ -10,10 +10,205 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: calc(var(--nav-height) + 3rem) 2rem 3rem;
+            display: flex;
+            gap: 3.5rem;
+            align-items: flex-start;
+        }
+
+        .about-left {
+            flex-shrink: 0;
+            width: 210px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .about-photo {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 3px solid #e8e0d8;
+            display: block;
+        }
+
+        .about-name {
+            margin-top: 1rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #002A5C;
+        }
+
+        .about-title {
+            margin-top: 0.3rem;
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .about-social {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .about-social a {
+            color: #555;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-social a:hover {
+            color: #8B1A2E;
+        }
+
+        .about-right {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .about-right h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #002A5C;
+            margin-bottom: 0.2rem;
+        }
+
+        .about-right .pronunciation {
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .about-right .position-line {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-right .position-line a {
+            color: #8B1A2E;
+            font-weight: 500;
+        }
+
+        .about-bio p {
+            font-size: 0.97rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .about-bio p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-bio a {
+            color: #8B1A2E;
+        }
+
+        .about-bio a:hover {
+            text-decoration: underline;
+        }
+
+        .about-bio .vision-block {
+            background: linear-gradient(135deg, #fff8f0 0%, #fef2f4 100%);
+            border: 1px solid #f0d0d8;
+            border-left: 4px solid #8B1A2E;
+            border-radius: 8px;
+            padding: 1.2rem 1.4rem;
+            margin: 1.4rem 0;
+            color: #333;
+            box-shadow: 0 2px 8px rgba(139, 26, 46, 0.06);
+        }
+
+        .about-bio .closing-block {
+            font-style: italic;
+            color: #555;
+        }
+
+        .divider {
+            max-width: 960px;
+            margin: 0 auto 0;
+            border: none;
+            border-top: 1px solid #e8e0d8;
+        }
+
+        .news-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 3rem;
+        }
+
+        .news-section h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #002A5C;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-size: 0.95rem;
+        }
+
+        .news-item {
+            display: flex;
+            gap: 1.2rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #f0ece6;
+            font-size: 0.93rem;
+            line-height: 1.6;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-date {
+            flex-shrink: 0;
+            width: 90px;
+            color: #8B1A2E;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding-top: 0.05rem;
+        }
+
+        .news-content {
+            color: #333;
+        }
+
+        .news-content a {
+            color: #8B1A2E;
+        }
+
+        @media (max-width: 700px) {
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+                padding-top: calc(var(--nav-height) + 2rem);
+                gap: 2rem;
+            }
+            .about-left {
+                width: 100%;
+            }
+            .about-right h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" style="background-color:#faf6f2;">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">ME</a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
@@ -22,13 +217,12 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="index.html" class="nav-link active">About</a></li>
                 <li><a href="publications.html" class="nav-link">Publications</a></li>
                 <li><a href="talks.html" class="nav-link">Talks/Panels</a></li>
                 <li><a href="podcast.html" class="nav-link">WiAIR Podcast</a></li>
                 <li><a href="teaching.html" class="nav-link">Teaching</a></li>
                 <li><a href="group.html" class="nav-link">Mentorship</a></li>
-                
                 <li><a href="techrun.html" class="nav-link">Techrun</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="cv.pdf" target="_blank" rel="noopener" class="nav-link" style="background:#800020; color:#fff; padding:7px 18px; border-radius:20px; font-weight:700; font-size:0.95rem;">CV/Resume</a></li>
@@ -37,120 +231,108 @@
     </nav>
 
     <main>
-        <!-- Hero Section with Persian Miniature Background -->
-        <section class="hero hero-persian">
-            <!-- Optional: Persian ambient music - click to play -->
-            <!-- <div class="music-player" id="music-player">
-                <button class="music-toggle" id="music-toggle" aria-label="Toggle Persian music">
-                    <span class="music-icon">🎵</span>
-                    <span class="music-text">Play Persian Music</span>
-                </button>
-                <audio id="persian-music" loop>
-                    <source src="audio/persian-ambient.mp3" type="audio/mpeg">
-                </audio>
-            </div> -->
-            <div class="container hero-content">
-                <div class="hero-image">
-                    <div class="profile-photo">
-                        <img src="images/profile.jpg" alt="Malikeh Ehghaghi - AI Safety Researcher" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'photo-placeholder\'>Your Photo</div>';">
-                    </div>
+        <!-- About / Intro -->
+        <div class="about-section">
+
+            <!-- Left column: photo + name + social -->
+            <div class="about-left">
+                <img src="images/profile.jpg" alt="Malikeh Ehghaghi" class="about-photo"
+                     onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:190px;height:190px;border-radius:50%;background:#e8e0d8;display:flex;align-items:center;justify-content:center;color:#888;\'>Photo</div>';">
+                <div class="about-name">Malikeh Ehghaghi</div>
+                <!-- <div class="about-title">
+                    PhD Student · University of Toronto<br>
+                    ML Research Scientist · Vector Institute
+                </div> -->
+                <div class="about-social">
+                    <a href="mailto:malikeh.ehghaghi@mail.utoronto.ca" aria-label="Email" style="color:#EA4335;">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/malikeh97/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:#0A66C2;">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://github.com/Malikeh97" target="_blank" rel="noopener" aria-label="GitHub" style="color:#24292e;">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=les29Z8AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" style="color:#4285F4;">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
+                    </a>
+                    <a href="https://twitter.com/Malikeh5" target="_blank" rel="noopener" aria-label="Twitter / X" style="color:#000;">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/malikeh1375/" target="_blank" rel="noopener" aria-label="Instagram" style="color:#E1306C;">
+                        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <!-- <a href="https://huggingface.co/Malikeh1375" target="_blank" rel="noopener" aria-label="Hugging Face" style="font-size:22px; line-height:1;">🤗</a> -->
                 </div>
-                <div class="hero-text">
-                    <h1><span class="name-first">Malikeh</span> <span class="name-last">Ehghaghi</span></h1>
-                    <!-- <p class="title">PhD Researcher in AI Safety</p>
-                    <p class="tagline"><em>Decentralizing, democratizing, and de-risking large-scale AI</em></p> -->
-                    <p class="bio">
-                        Hi, I am Malikeh <span class="pronunciation">(/mɒː.liːˈke/)</span>, a PhD student at the University of Toronto supervised by <a href="https://colinraffel.com/" target="_blank">Colin Raffel</a>. My research focuses on derisking and democratizing AI by building reliable and efficient machine learning systems that are robust under real-world uncertainty. <br>
+            </div>
+
+            <!-- Right column: bio -->
+            <div class="about-right">
+                <h1>Malikeh Ehghaghi <span class="pronunciation">(/mɒː.liːˈke/)</span></h1>
+                <div class="about-bio">
+                    <p>
+                        I'm a first-year PhD student in Computer Science at the <a href="https://www.utoronto.ca/" target="_blank" rel="noopener">University of Toronto</a>, advised by <a href="https://colinraffel.com/" target="_blank" rel="noopener">Colin Raffel</a>, and an ML Research Scientist at the <a href="https://vectorinstitute.ai/" target="_blank" rel="noopener">Vector Institute</a>. My current work focuses on <strong>AI safety and security</strong>, grounded in a broader background that spans efficient large-scale pretraining, continual learning, model merging, modular AI, decentralized training, interpretability, and fairness.
                     </p>
-                    <div class="social-links">
-                        <a href="mailto:malikeh.ehghaghi@mail.utoronto.ca" aria-label="Email" class="social-link">
-                            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/malikeh97/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
-                            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                        <a href="https://github.com/Malikeh97" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
-                            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=les29Z8AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" class="social-link">
-                            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
-                        </a>
-                        <a href="https://twitter.com/Malikeh5" target="_blank" rel="noopener" aria-label="Twitter" class="social-link">
-                            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <a href="https://www.instagram.com/malikeh1375/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
-                            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
+                    <p>
+                        Before my PhD, I studied Computer Engineering at the <a href="https://ut.ac.ir/en" target="_blank" rel="noopener">University of Tehran</a>, and later completed my Master's in <a href="https://mscac.utoronto.ca/" target="_blank" rel="noopener">Applied Computing (MScAC)</a> in Computer Science at the University of Toronto under the supervision of <a href="https://web.cs.dal.ca/~rudzicz/" target="_blank" rel="noopener">Frank Rudzicz</a> and <a href="https://scholar.google.com/citations?user=oVkrFhAAAAAJ" target="_blank" rel="noopener">Jekaterina Novikova</a>.
+                    </p>
+                    <p>
+                        I spent five years in industry, starting in Toronto in the sensitive domain of AI for mental health at <a href="https://winterlightlabs.com/" target="_blank" rel="noopener">Winterlight Labs</a> and <a href="https://www.cambridgecognition.com/" target="_blank" rel="noopener">Cambridge Cognition</a>. Building models to detect mental health disorders from speech made one thing clear: "accuracy alone is not enough". In high-stakes settings, systems must be reliable, fair, and deeply interpretable. If a model is not transparent and trustworthy, it is not ready for real-world use.
+                    </p>
+                    <p>
+                        I later moved to Silicon Valley as a founding NLP engineer at <a href="https://www.arcee.ai/" target="_blank" rel="noopener">Arcee AI</a>, where we challenged the idea that "bigger is always better." We focused on building efficient, domain-adapted small language models, emphasizing both model-centric approaches (e.g., merging, pruning, distillation) and data-centric approaches (e.g., data mixing, synthetic data generation, filtering, deduplication). That experience shaped a core belief I carry into my research today: the future of AI should not be centralized, opaque, or inaccessible.
+                    </p>
+                    <p>
+                        After five years in startups, I returned to academia with a clear goal: to bring a lean startup mindset to research — starting with hypotheses, building MVPs, and iterating through build–measure–learn cycles grounded in real-world feedback. I focus on building systems that hold up beyond the lab, guided by a vision of <strong>de-risking, democratizing, and decentralizing AI</strong>.
+                    </p>
+                    <div class="vision-block">
+                        <p style="margin-bottom:0.7rem; font-weight:600; color:#8B1A2E; font-size:0.95rem; letter-spacing:0.01em;">
+                            I see "AI safety" not as a single problem, but as a stack:
+                        </p>
+                        <ul style="margin: 0 0 0 1.2rem; padding:0; display:flex; flex-direction:column; gap:0.4rem;">
+                            <li>How we <strong>build</strong> models? e.g., training efficiency, decentralized learning</li>
+                            <li>How we <strong>align</strong> them? e.g., alignment, post-training, and reward modeling</li>
+                            <li>How we <strong>evaluate</strong> them? e.g., risk modeling, robustness, and benchmarking</li>
+                            <li>How they <strong>interact with the world?</strong> e.g., human interaction, trust, accessibility</li>
+                        </ul>
                     </div>
+                    <p>
+                        Beyond research, I invest in that final layer by building communities for minorities in tech. I serve as the Vice Chair of the <a href="https://www.linkedin.com/company/toronto-acm-w-professional-chapter" target="_blank" rel="noopener"><strong>ACM-W Toronto Professional Chapter</strong></a>, building a local hub for women in tech in Toronto to share knowledge, connect, and collaborate. I previously co-hosted the <a href="https://women-in-ai-research.github.io/" target="_blank" rel="noopener"><strong>Women in AI Research</strong></a> podcast, splotlighting women in AI research. I also founded <a href="techrun.html"><strong>Techrun</strong></a>, as a shared space for learning, networking, and building across the Persian-speaking tech community in Toronto.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Research Interests -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Research Interests</h2>
-                <div class="research-areas">
-                    <div class="research-card">
-                        <h3>AI Safety & Robustness</h3>
-                        <p>Evaluating and improving the safety of large language models, including adversarial robustness and alignment.</p>
-                    </div>
-                    <div class="research-card">
-                        <h3>LLM Capabilities & Evaluation</h3>
-                        <p>Creating better evaluation frameworks with a focus on probabilistic assessment.</p>
-                    </div>
-                    <div class="research-card">
-                        <h3>Model Merging</h3>
-                        <p>Techniques to combine multiple models efficiently, enabling collaborative development.</p>
-                    </div>
-                    <div class="research-card">
-                        <h3>Open-Source AI</h3>
-                        <p>Contributing to open-source AI development to ensure broad access to AI capabilities.</p>
-                    </div>
-                    <div class="research-card">
-                        <h3>Democracy in AI</h3>
-                        <p>Working toward governance structures that give diverse stakeholders a voice.</p>
-                    </div>
-                    <div class="research-card">
-                        <h3>Collaborative Learning</h3>
-                        <p>Distributed and federated learning methods that preserve privacy.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <hr class="divider">
 
-        <!-- News Section -->
-        <section class="section section-alt">
-            <div class="container">
-                <h2 class="section-title">News & Updates</h2>
-                <div class="news-list">
-                    <div class="news-item">
-                        <span class="news-date">2025</span>
-                        <div class="news-content">
-                            <strong>ICML 2025</strong> - Paper on "Tokenizer Effects on Robustness in Large Language Models" accepted!
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">2024</span>
-                        <div class="news-content">
-                            <strong>NeurIPS Talk</strong> - Presented on Model Merging techniques and applications.
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">2024</span>
-                        <div class="news-content">
-                            <strong>MergeKit Contributor</strong> - Active contributor to the open-source model merging library.
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">Current</span>
-                        <div class="news-content">
-                            <strong>New Project</strong> - Working on probabilistic evaluation of attack success rates in LLMs.
-                        </div>
-                    </div>
-                </div>
+        <!-- News -->
+        <div class="news-section">
+            <h2>News</h2>
+            <div class="news-item">
+                <span class="news-date">Mar 2026</span>
+                <div class="news-content">Co-published white paper <em><a href="https://www.torontomachinelearning.com/unspoken-unmeasured-undeniable-the-lived-experiences-of-women-in-data-ai-and-our-hope-for-designing-a-better-future/" target="_blank" rel="noopener">Unspoken, Unmeasured, Undeniable</a></em> with the Toronto Machine Learning community on the lived experiences of women in Data &amp; AI.</div>
             </div>
-        </section>
+            <div class="news-item">
+                <span class="news-date">2025</span>
+                <div class="news-content">Paper <em>"Tokenizer Effects on Robustness in Large Language Models"</em> accepted at <strong>ICML 2025</strong>.</div>
+            </div>
+            <div class="news-item">
+                <span class="news-date">2025</span>
+                <div class="news-content">Technical Facilitator for the <strong>Agentic AI Bootcamp 1.0 &amp; 2.0</strong> and <strong>Agentic AI Evaluation Bootcamp 1.0</strong> at the Vector Institute.</div>
+            </div>
+            <div class="news-item">
+                <span class="news-date">2024</span>
+                <div class="news-content">Presented on Model Merging techniques at <strong>NeurIPS 2024</strong> — joint event with the Innovate team.</div>
+            </div>
+            <div class="news-item">
+                <span class="news-date">2024</span>
+                <div class="news-content">Active contributor to <a href="https://github.com/arcee-ai/mergekit" target="_blank" rel="noopener"><strong>MergeKit</strong></a>, the open-source model merging library.</div>
+            </div>
+            <div class="news-item">
+                <span class="news-date">2024</span>
+                <div class="news-content">Started PhD at the <strong>University of Toronto</strong>, advised by Colin Raffel.</div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
