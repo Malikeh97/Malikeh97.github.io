@@ -150,27 +150,40 @@
             padding: 2.5rem 2rem 3rem;
         }
 
+        .news-box {
+            background: #fff;
+            border: 1px solid #e8e0d8;
+            border-radius: 10px;
+            padding: 1.5rem 1.8rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+
         .news-section h2 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: #002A5C;
             margin-bottom: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            letter-spacing: 0.02em;
         }
 
         .news-item {
             display: flex;
             gap: 1.2rem;
-            padding: 0.6rem 0;
+            padding: 0.65rem 0;
             border-bottom: 1px solid #f0ece6;
-            font-size: 0.93rem;
-            line-height: 1.6;
+            font-size: 0.94rem;
+            line-height: 1.65;
         }
 
         .news-item:last-child {
             border-bottom: none;
+        }
+
+        .news-item.hidden {
+            display: none;
         }
 
         .news-date {
@@ -179,7 +192,7 @@
             color: #8B1A2E;
             font-weight: 600;
             font-size: 0.85rem;
-            padding-top: 0.05rem;
+            padding-top: 0.1rem;
         }
 
         .news-content {
@@ -187,7 +200,29 @@
         }
 
         .news-content a {
+            color: #000;
+        }
+
+        .news-read-more {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .news-read-more button {
+            background: none;
+            border: 1px solid #8B1A2E;
             color: #8B1A2E;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .news-read-more button:hover {
+            background: #8B1A2E;
+            color: #fff;
         }
 
         @media (max-width: 700px) {
@@ -307,32 +342,80 @@
 
         <!-- News -->
         <div class="news-section">
-            <h2>News</h2>
-            <div class="news-item">
-                <span class="news-date">Mar 2026</span>
-                <div class="news-content">Co-published white paper <em><a href="https://www.torontomachinelearning.com/unspoken-unmeasured-undeniable-the-lived-experiences-of-women-in-data-ai-and-our-hope-for-designing-a-better-future/" target="_blank" rel="noopener">Unspoken, Unmeasured, Undeniable</a></em> with the Toronto Machine Learning community on the lived experiences of women in Data &amp; AI.</div>
-            </div>
-            <div class="news-item">
-                <span class="news-date">2025</span>
-                <div class="news-content">Paper <em>"Tokenizer Effects on Robustness in Large Language Models"</em> accepted at <strong>ICML 2025</strong>.</div>
-            </div>
-            <div class="news-item">
-                <span class="news-date">2025</span>
-                <div class="news-content">Technical Facilitator for the <strong>Agentic AI Bootcamp 1.0 &amp; 2.0</strong> and <strong>Agentic AI Evaluation Bootcamp 1.0</strong> at the Vector Institute.</div>
-            </div>
-            <div class="news-item">
-                <span class="news-date">2024</span>
-                <div class="news-content">Presented on Model Merging techniques at <strong>NeurIPS 2024</strong> — joint event with the Innovate team.</div>
-            </div>
-            <div class="news-item">
-                <span class="news-date">2024</span>
-                <div class="news-content">Active contributor to <a href="https://github.com/arcee-ai/mergekit" target="_blank" rel="noopener"><strong>MergeKit</strong></a>, the open-source model merging library.</div>
-            </div>
-            <div class="news-item">
-                <span class="news-date">2024</span>
-                <div class="news-content">Started PhD at the <strong>University of Toronto</strong>, advised by Colin Raffel.</div>
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#002A5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
+                    <path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/>
+                </svg>
+                News
+            </h2>
+            <div class="news-box">
+                <div class="news-item">
+                    <span class="news-date">Apr 2026</span>
+                    <div class="news-content">Panelist at Build With AI: Women in Tech by Google Developer Groups – UofT Mississauga, held at Shopify Toronto.</div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Apr 2026</span>
+                    <div class="news-content">Serving as Technical Facilitator for the <a href="https://entrepreneurs.utoronto.ca/resource/data-readiness-model-development-deployment-darmod-program/" target="_blank" rel="noopener">DaRMoD Program</a> (Data Readiness, Model Development &amp; Deployment) at the Vector Institute this summer.</div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Mar 2026</span>
+                    <div class="news-content">Co-published white paper <em><a href="https://www.torontomachinelearning.com/unspoken-unmeasured-undeniable-the-lived-experiences-of-women-in-data-ai-and-our-hope-for-designing-a-better-future/" target="_blank" rel="noopener">Unspoken, Unmeasured, Undeniable</a></em> with the Toronto Machine Learning community on the lived experiences of women in Data &amp; AI.</div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Feb 2026</span>
+                    <div class="news-content">Serving as Graduate Admission Interviewer for the <a href="https://mscac.utoronto.ca/" target="_blank" rel="noopener">MScAC program</a> at the University of Toronto.</div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Feb 2026</span>
+                    <div class="news-content">Serving as Paper Reviewer for the <a href="https://trustworthy-ai-workshop.github.io/iclr2026/" target="_blank" rel="noopener">ICLR 2026 Workshop on Principled Design for Trustworthy AI - Interpretability, Robustness, and Safety across Modalities</a></div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Jan 2025</span>
+                    <div class="news-content">Serving as Technical Facilitator for the Agentic AI Evaluation Bootcamp 1.0 at the Vector Institute.</div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Jan 2025</span>
+                    <div class="news-content">New paper live on arXiv: <em>TokSuite: Measuring the Impact of Tokenizer Choice on Language Model Behavior</em>.</div>
+                </div>
+                <div class="news-item hidden">
+                    <span class="news-date">Dec 2025</span>
+                    <div class="news-content">Co-presenting tutorial <em>"Model Merging: Theory, Practice, and Applications"</em> at NeurIPS 2025 with Colin Raffel, Marco Ciccone.</div>
+                </div>
+                <div class="news-item hidden">
+                    <span class="news-date">Dec 2025</span>
+                    <div class="news-content">Officially launched the Toronto ACM-W Professional Chapter — an event sponsored by the Vanguard team.</div>
+                </div>
+                <div class="news-item hidden">
+                    <span class="news-date">Nov 2024</span>
+                    <div class="news-content">Serving as the Teaching Facilitator of the Agentic AI Bootcamp 2.0 at the Vector Institute.</div>
+                </div>
+                <div class="news-item hidden">
+                    <span class="news-date">Sep 2024</span>
+                    <div class="news-content">Serving as the TA of CSC413/2516: Neural Networks and Deep Learning.</div>
+                </div>
+                <div class="news-item hidden">
+                    <span class="news-date">Sep 2024</span>
+                    <div class="news-content">Started PhD at the University of Toronto, advised by Colin Raffel.</div>
+                </div>
+                <div class="news-read-more" id="news-toggle-wrap">
+                    <button onclick="toggleNews(this)">Read More</button>
+                </div>
             </div>
         </div>
+        <script>
+        function toggleNews(btn) {
+            const hidden = document.querySelectorAll('.news-item.hidden, .news-item.extra');
+            const isExpanded = btn.textContent === 'Show Less';
+            document.querySelectorAll('.news-item').forEach((item, i) => {
+                if (i >= 4) {
+                    item.style.display = isExpanded ? 'none' : 'flex';
+                    item.classList.toggle('hidden', isExpanded);
+                }
+            });
+            btn.textContent = isExpanded ? 'Read More' : 'Show Less';
+        }
+        </script>
     </main>
 
     <!-- Footer -->
