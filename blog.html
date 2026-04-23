@@ -13,16 +13,17 @@
         /* Blog-specific styles */
         .blog-hero {
             padding: calc(var(--nav-height) + var(--spacing-xl)) 0 var(--spacing-lg);
-            background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-cream-warm) 100%);
+            background: #E8A020;
             text-align: center;
         }
 
         .blog-hero h1 {
             margin-bottom: var(--spacing-sm);
+            color: #fff;
         }
 
         .blog-hero p {
-            color: var(--color-text-light);
+            color: rgba(255,255,255,0.9);
             font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto;
@@ -175,7 +176,15 @@
         <!-- Blog Hero -->
         <section class="blog-hero">
             <div class="container">
-                <h1>Blog</h1>
+                <h1 style="display:flex; align-items:center; gap:0.6rem; justify-content:center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
+                        <path d="M18 14h-8"/>
+                        <path d="M15 18h-5"/>
+                        <path d="M10 6h8v4h-8V6Z"/>
+                    </svg>
+                    Blog
+                </h1>
                 <p>Blog posts and white papers spanning <strong>tech &amp; AI research</strong>, <strong>business &amp; market trends</strong>, <strong>startup ecosystems</strong>, and the mission of <strong>de-risking, democratizing, and decentralizing AI</strong>.</p>
             </div>
         </section>
@@ -324,7 +333,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="background-color:#E8A020;">
         <div class="container">
             <p>&copy; 2025 Malikeh Ehghaghi. All rights reserved.</p>
             <p class="footer-note">Built with care and attention to detail.</p>
