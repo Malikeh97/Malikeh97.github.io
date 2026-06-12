@@ -56,6 +56,30 @@
             <div class="container">
                 <div class="publications-list">
 
+                    <!-- 2026 -->
+                    <article class="publication">
+                        <div class="pub-row">
+                            <div class="pub-thumb-wrap">
+                                <img src="images/rup_framework-1.png" alt="Risk Under Pressure thumbnail" class="pub-thumb">
+                            </div>
+                            <div class="pub-body">
+                                <h3 class="pub-title">Risk Under Pressure: Compute-Aware Evaluation of Adversarial Robustness in Language Models</h3>
+                                <p class="pub-authors"><strong>Malikeh Ehghaghi*</strong>, Boglárka Ecsedi*, Marsha Chechik, Colin Raffel</p>
+                                <p class="pub-venue-line"><em>arXiv, 2026</em></p>
+                                <div class="pub-actions">
+                                    <button class="pub-abs-btn">Abstract</button>
+                                    <a href="https://arxiv.org/abs/2606.11409" class="pub-action-link">Paper</a>
+                                    <a href="https://github.com/r-three/risk-under-pressure" class="pub-action-link">Code</a>
+                                    <a href="https://arxiv.org/bibtex/2606.11409" class="pub-action-link">BibTeX</a>
+                                </div>
+                            </div>
+                            <div class="pub-year">2026</div>
+                        </div>
+                        <div class="pub-abstract hidden">
+                            <p>Adversarial robustness evaluations of large language models (LLMs) typically report attack success rate (ASR) under fixed query budgets, implicitly treating all attacks as equally costly. In practice, the computational expense of different attack strategies can vary by orders of magnitude. Consequently, ASR at a fixed budget can obscure the true effort required to jailbreak a model, thereby making it hard to determine whether an attack's cost justifies its payoff to the attacker. We propose a compute-aware evaluation framework based on computational pressure, measured in cumulative floating-point operations (FLOPs), as a proxy for adversarial effort. We introduce risk-compute curves, which map compute budgets to attack risk, and derive two metrics that summarize the average pressure required for a given attack to succeed. Across ten models spanning three families and four different stages in language model training and alignment, evaluated with three attack strategies (gradient-based, iterative refinement, and template-based) on two jailbreak robustness benchmarks, we find: (1) alignment training has non-monotonic effects on compute-space robustness; (2) scaling model size reduces gradient-based attack effectiveness but has limited impact on cheaper template-based attacks; (3) gradient-based attacks optimized on a surrogate model can transfer to a separate target model, providing a way to reduce attacker costs; (4) compute cost varies by up to ≈5× across harm categories within a single model; and (5) safety-aligned RL increases aggregate cost while leaving some categories disproportionately accessible. We release our framework to enable compute-aware risk assessment and evaluation.</p>
+                        </div>
+                    </article>
+
                     <!-- 2025 -->
                     <article class="publication">
                         <div class="pub-row">
