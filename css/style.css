@@ -229,7 +229,7 @@ em {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    color: #002A5C;
+    color: #800020;
     letter-spacing: 0.08em;
     transition: color var(--transition-medium);
 }
